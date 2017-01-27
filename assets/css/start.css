@@ -1,0 +1,53 @@
+.arrivals {
+    padding: 2px 0 0 0%;
+    clear: both;
+    margin: 0 auto;
+}
+
+.arrivals-header {
+    width: 100%;
+    max-width: 1300px;
+    margin: 110px 0 65px 0;
+    font-size: 59px;
+    padding: 0;
+    clear: both;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+    .arrivals-header {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        font-size: 50px;
+        padding: 0;
+    }
+
+    .buttons.arrivals-btn {
+        width: 39%;
+        font-size: 22px;
+        margin: 0 auto;
+        display: block;
+        height: 69px;
+        margin-bottom: 133px;
+        margin-top: 27px;
+    }
+}
+
+@media (max-width: 480px) {
+    .arrivals-header {
+        margin: 40px 0 0 0;
+        font-size: 50px;
+    }
+
+    .buttons.arrivals_btn {
+        width: 58%;
+        padding: 5px 0 0px 0;
+        font-size: 18px;
+        margin: 12px auto 100px auto;
+        display: block;
+        height: 65px;
+    }
+}
+
+

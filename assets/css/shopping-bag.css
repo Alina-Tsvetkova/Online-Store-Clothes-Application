@@ -1,0 +1,279 @@
+.shopping-bag-title {
+    background: white;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 0px;
+    padding: 20px 90px 20px 5%;
+    outline: none;
+    word-spacing: 3px;
+    transition-property: background;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.shopping-bag-title:hover {
+    background: lightgrey;
+}
+
+.shopping-bag-content {
+    width: 90%;
+    padding: 40px 0 0 0;
+    margin: 0 auto;
+}
+
+.cart-item {
+    display: inline-block;
+    margin: 0;
+    width: 50%;
+}
+
+.cart-item-name {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.cart-item p {
+    display: block;
+    font-size: 12px;
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.item-price {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.remove-item, .empty-bag {
+    background: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.remove-item {
+    color: #f14a58;
+    line-height: 4;
+    padding: 0;
+}
+
+.remove-item:hover {
+    color: #7a3232;
+}
+
+.cart-item-description {
+    float: right;
+    width: 46%;
+    line-height: 1.7;
+}
+
+.note {
+    font-size: 12px;
+    width: 100%;
+    background: #f7f7f7;
+    font-weight: bold;
+    margin-top: 45px;
+    padding: 10px;
+    text-align: center;
+}
+
+.main-functional {
+    padding: 25px 0 28px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.empty-bag {
+    font-size: 13px;
+    width: 35.5%;
+    text-align: left;
+    float: left;
+    margin-top: 35px;
+    padding-left: 2%;
+}
+
+.total-cost {
+    width: 30%;
+    float: right;
+    font-size: 12px;
+    text-align: right;
+    margin: 30px 2% 0 0;
+    letter-spacing: 1px;
+}
+
+.total-sum {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.buy-now.buttons {
+    background: white;
+    border: 1px solid rgba(181, 168, 168, 0.9);
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    height: 75px;
+    margin: 30px auto;
+    display: inline-block;
+}
+
+.buy-now:hover {
+    background: lightgrey;
+}
+
+.buy-now:active {
+    background: dimgrey;
+}
+
+.additional-item {
+    float: left;
+}
+
+.additionalItemsList {
+    overflow: hidden;
+    width: 2200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.additional-items {
+    position: absolute;
+    margin-top: 40px;
+}
+
+.additional-item-img {
+    width: 100%;
+}
+
+.drag-wrapper {
+    position: relative;
+    margin-bottom: 307px;
+}
+
+.thankful-title, .no-items-title {
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.thankful-title {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .shopping-bag-content .cart-item {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .shopping-bag-content {
+        padding: 30px 0 0 30px;
+        width: 98%;
+    }
+
+    .cart-item-img {
+        width: 42%;
+        height: auto;
+    }
+
+    .shopping-bag-content .cart-item p {
+        margin-bottom: 0px;
+        line-height: 1.2;
+    }
+
+    .cart-item-name {
+        line-height: 1.7;
+        margin-bottom: 8px;
+    }
+
+    .main-functional {
+        padding: 25px 0 28px 0;
+    }
+
+    .total-cost {
+        margin: 25px 0% 0 0;
+        width: 27%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .note {
+        font-size: 10px;
+        padding: 10px 5%;
+        margin: 25px 0 0 0;
+        line-height: 1.7;
+        clear: both;
+    }
+
+    .shopping-bag-title {
+        font-size: 16px;
+    }
+
+    .shopping-bag-content {
+        width: 100%;
+        padding: 0;
+        padding-top: 7px;
+    }
+
+    .cart-item-img, .cart-item-description {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .cart-item-description {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-functional {
+        padding: 20px 0 6px 0;
+    }
+
+    .empty-bag {
+        width: 29%;
+        font-size: 10px;
+        margin-top: 25px;
+
+    }
+
+    .remove-item {
+        font-size: 12px;
+        margin: 0 0 0 -3px;
+    }
+
+    .buy-now {
+        width: 42%;
+        padding: 0px 0 0px 0;
+        font-size: 18px;
+        height: 62px;
+        margin: 0px 0 29px 0 !important;
+    }
+
+    .total-cost {
+        width: 25%;
+        font-size: 10px;
+        margin-top: 13px;
+        margin-right: 0;
+    }
+
+    .total-sum {
+        font-size: 14px;
+    }
+}
+
+
+
+

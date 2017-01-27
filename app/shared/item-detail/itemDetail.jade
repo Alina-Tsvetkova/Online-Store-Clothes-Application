@@ -1,0 +1,21 @@
+link(href="assets/css/item-detail.css" rel='stylesheet')
+div#wrapper
+    div#nav
+    a.back-catalog &#60; Back to catalog
+    section.item-detailed(ng-controller="clothDetailCtrl")
+        figure.item-pics(ng-controller="addToCartCtrl")
+            img.image(ng-src="{{item.img}}")
+            figcaption.item-info
+                h3.item-name {{item.name}}
+                p.price
+                    span#currency &#163;
+                    span#price {{item.price | number:2}}
+                p.item-description {{item.description}}
+                h4.size-header
+                div.sizes
+                    button(ng-repeat="size in sizes", ng-click="chooseSize(size)") {{size}}
+                h4.color-header Color
+                div.colors
+                    button(ng-repeat="color in colors" ng-click="chooseColor(color)") {{color.slice(0,1).toUpperCase()+color.slice(1)}}
+            button.buttons.add-to-bag-btn(ng-click="addToBag(item.name, item.price, item.img, item.id, size, color, item.types, 1)") Add to bag
+    div#banner-container(download-banners)

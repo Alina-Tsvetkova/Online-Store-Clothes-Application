@@ -1,0 +1,35 @@
+div(ng-controller="renderCartCtrl")
+    div#nav
+    a.shopping-bag-title Shopping bag
+    div.shopping-bag-section
+        div.shopping-bag-content(ng-controller="removeFromCartCtrl")
+            div.thankful-title Thanks for Order!
+            div.no-items-title There is no Items in the Cart!
+            figure.cart-item(ng-repeat="item in items")
+                img.cart-item-img(ng-src="{{item.img}}")
+                figcaption.cart-item-description
+                    h3.cart-item-name {{item.name}}
+                    p Color:
+                        span.color {{item.color}}
+                    p Size:
+                        span.size {{item.size}}
+                    p Quantity:
+                        span.quantity {{item.quantity}}
+                    span.item-price &#163; {{item.price | number:2}}
+                    button.remove-item(ng-click="removeItemFromCart(item.id)") Remove item
+    div.note  You've qualified for Free UK Next Day Delivery on your order. Don't forget to enter the code nextday at checkout
+    div.main-functional(ng-controller="addToCartCtrl")
+        div(ng-controller="removeFromCartCtrl")
+            button.empty-bag(ng-click="emptyBag()", type='submit') Empty bag
+            button.buy-now.buttons(ng-click="orderCart()", type='submit')
+                a(href="") Buy now
+            span.total-cost Total Cost<br>
+                span.total-sum &#163;
+                span {{totalSum | number:2}}
+    div.drag-wrapper
+        div.additional-items(ng-controller="draggableSliderCtrl")
+            -var additionalItems = ["assets/img/sub-img/jew1-sub.jpg","assets/img/sub-img/jew2-sub.jpg","assets/img/sub-img/jew3-sub.jpg","assets/img/sub-img/jew4-sub.jpg","assets/img/sub-img/jew5-sub.jpg","assets/img/sub-img/jew6-sub.jpg"]
+            ul.additionalItemsList
+                for addItem in additionalItems
+                    li.additional-item
+                        img(src=addItem).additional-item-img

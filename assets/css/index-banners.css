@@ -1,0 +1,137 @@
+.banners {
+    position: relative;
+    margin-top: -5px;
+}
+
+.left-banner, .right-banner {
+    width: 50%;
+    position: relative;
+    float: left;
+}
+
+.banners figure {
+    margin: 0;
+}
+
+.banners figcaption {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    top: 55px;
+    left: 100px;
+    text-align: center;
+}
+
+.right-banner-tablet, .right-banner-tablet-hover {
+    display: none;
+}
+
+.banners img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-inscr {
+    color: #8a8a8a;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.left-banner figure figcaption {
+    left: 65.5%;
+}
+
+.banners figcaption .banner-inscr {
+    text-align: center;
+    display: block;
+    margin-top: 4px;
+}
+
+.right-banner figure figcaption {
+    left: 57.5%;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+    .right-banner-tablet-hover {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 33%;
+    }
+
+    .right-banners-container:hover .right-banner-tablet-hover {
+        display: block;
+    }
+
+    .banners figcaption {
+        font-size: 26px;
+        top: 10%;
+    }
+
+    .left-banner {
+        width: 66.7%;
+    }
+
+    .hide-mob {
+        display: none !important;
+    }
+
+    .right-banner-tablet, .right-banner {
+        width: 33.3%;
+        position: relative;
+    }
+
+    .right-banner-tablet {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .right-banner .banner-img {
+        width: 100%;
+    }
+
+    .right-banner-tablet figcaption, .right-banner-tablet-hover figcaption {
+        position: absolute;
+        top: 60%;
+        text-align: center;
+        left: 0;
+        width: 100%;
+    }
+
+    .right-banner-tablet figcaption {
+        color: #f14a58;
+    }
+
+    .right-banner-tablet:hover + .right-banner-tablet-hover {
+        z-index: 1;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .banners article {
+        width: 100%;
+    }
+
+    .left-banner {
+        width: 100%;
+        height: 11.3%;
+        float: none;
+        margin: 0;
+    }
+
+    .left-banner img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .right-banner, .right-banner-tablet, .right-banner-tablet-hover {
+        display: none !important;
+    }
+
+    .banners figcaption {
+        font-size: 24px;
+        top: 13%;
+        left: 60% !important;
+    }
+}

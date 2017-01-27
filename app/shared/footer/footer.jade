@@ -1,0 +1,36 @@
+footer(ng-controller="createListsCtrl")
+    nav.left-part
+        nav.left-footer
+            ul
+                h4.left-part-title Quick Links
+                li.footer-list-item(ng-repeat="listItem in footerLists")
+                    a(href="") {{listItem}}
+        nav.right-footer
+            ul
+                h4.left-part-title Customer Care
+                li.footer-list-item(ng-repeat="listItem in footerListsRight")
+                    a(href="") {{listItem}}
+    section.right-part
+        div.questions
+            h4.right-part-title Questions
+            img.twitter-logo(src="assets/img/desktop/twitter_grey_icon.png")
+            span Tweet us
+                strong @template
+        div.orders
+            h4.right-part-title Order by phone
+                br
+                span 8-800-409-47-12
+        p.delivery-note We have our own delivery servie which
+            <br> operates in 23 major European cities. Delivery time - 3-5 days.
+        img.facebook-logo(src="assets/img/desktop/facebook.png")
+        img.twitter-blue-logo(src="assets/img/desktop/twitter-logo.png")
+    div.clearfix
+    section.bottom-part-info
+        div.bottom-part-main
+            ul.bottom-part
+                li(ng-repeat="listItem in bottomList")
+                    a(href="") {{listItem}}
+            img.facebook-logo-mob(src="assets/img/desktop/facebook.png")
+            img.twitter-blue-logo-mob(src="assets/img/desktop/twitter-logo.png")
+        p.copyright &#169; 2010-2015, The Template Group inc.
+        div.clearfix

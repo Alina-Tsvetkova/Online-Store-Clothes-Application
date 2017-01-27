@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/221.ttf') format('truetype'),
+    url('../fonts/221.woff') format('woff'),
+    url('../fonts/221.eot') format('embedded-opentype'),
+    url('../fonts/221.otf') format('opentype');
+}
+
+body {
+    background: rgba(181, 168, 168, 0.5);
+    font-family: 'Open Sans';
+    min-width: 300px;
+    margin: -10px 0 -20px 0;
+}
+
+a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    margin-left: -40px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#wrapper {
+    background: white;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    padding: 30px 0 0;
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+.buttons {
+    font-size: 24px;
+    background-color: white;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    width: 26%;
+    height: 79px;
+    display: block;
+    margin: 0 auto 50px auto;
+    font-weight: bold;
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: 1s;
+}
+
+.buttons:hover {
+    background: #c4c0c0;
+}
+
+.buttons:active {
+    background: dimgrey;
+}
+
+@media (max-width: 480px) {
+
+    #wrapper {
+        padding: 0;
+    }
+
+    .hide-mob {
+        display: none;
+    }
+
+    .buttons {
+        width: 60%;
+        padding: 5px 0 0px 0;
+        font-size: 18px;
+        margin: 10px auto 110px auto;
+        display: block;
+        height: 70px;
+    }
+}
+
+

@@ -1,0 +1,22 @@
+header.header(ng-controller="renderCartCtrl", ng-app="docsTemplateUrlDirective")
+    h2.logo
+        a(href="#/start") Template
+    h2.logo-mobile
+        a(href="#/start") TL
+    section.bag(ng-init="quantityOfItems")
+        span.email-sign E-mail sign up
+        a(href="#/3_shopping_bag")
+            img.icon_bag(src="assets/img/desktop/bag_icon.png")
+        a(href="#/3_shopping_bag")
+            span.bag_counter &#160;&#160;Bag
+        span#totalSum  &#163;
+            span#cartSum {{totalSum | number:2}} (
+            span#itemQuantity {{totalItemsQuantity}})
+    nav.top-navigation(ng-click="showDiv = !showDiv")
+        ul.top-nav(ng-controller="addActiveColor")
+            each item in ['Women', 'Men', 'Handbags', 'Accessories', 'Sale', 'New arrivals', 'Clearance', 'Store Locator']
+                li.nav-elem(ng-click="changeClass(" + "'" + item + "'" + ")")
+                    a(ng-class="{class : classVar===" + "'" + item + "'" + " }", href='#/' + item)= item
+        input(type='text').search-input.desktop-search
+        input(type='text').search-input.input-mobile
+        nav(mobile-menu)

@@ -1,0 +1,14 @@
+div(download-slider)
+div(download-indexbanners)
+section.items-container(ng-controller="filterCtrl")
+    h1.arrivals-header New arrivals
+    ul.item-list
+        li.item(ng-repeat="arrival in allItems | limitTo:-4")
+            figure
+                img(ng-src="{{arrival.img}}").item-image
+                figcaption.item-description
+                    h4 {{arrival.name}}
+                    span.price &#163;{{arrival.price}}
+                    button.view-more
+                        a(href="#/clothes/{{arrival.id}}") View More
+button.arrivals-btn.buttons All arrivals

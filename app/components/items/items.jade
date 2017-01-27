@@ -1,0 +1,58 @@
+div(ng-controller="clothesAppCtrl")
+    div#nav
+    section.filters(ng-controller="filterCtrl")
+        - var filters = [[ "Not selected", "Casual Style", "New Look", "Sport", "Vintage", "Classic"],["Not selected", "Coats & Jackets", "Dresses", "Jumpers", "Jeans", "T-Shirts"],["Not selected", "Black", "Blue", "Red", "Green", "Brown"],["Not selected", "Antipodium", "Adidas", "New Balance", "River Island", "Levi's"],["Not selected", "UK 18", "UK 18L", "UK 20", "UK 20L", "UK 20S"]];
+        div.filter-wrapper
+            span.filter-info Choose products by filters
+            span.filters_arrows(ng-click="showDiv = !showDiv; changeBackGround = !changeBackGround", ng-class="{ 'crossBackground' : changeBackGround}")
+        div.lists-wrapper(ng-class="{'filterIsOpen': showDiv}")
+            ul.filter-list.filter
+                h4.filter-title Fashion
+                li.filter-item(ng-repeat="styles in stylesGroup")
+                    label.filter-content
+                        input(type='checkbox', ng-model="selectedStyles[styles]").filter-box
+                        span.label-text {{styles}}
+                        span.filtered-items-quantity  ({{(filteredItems | filter:styles).length}})
+            ul.filter-list
+                h4.filter-title Product Type
+                li.filter-item(ng-repeat="types in typesGroup")
+                    label.filter-content
+                        input(type='checkbox', ng-model="selectedTypes[types]").filter-box
+                        span.label-text {{types}}
+                        span.filtered-items-quantity  ({{(filteredItems | filter:types).length}})
+            ul.filter-list
+                h4.filter-title Price
+                li.filter-item(ng-repeat="prices in pricesGroup")
+                    label.filter-content
+                        input(type='checkbox', ng-model="selectedPrices[prices]").filter-box
+                        span.label-text {{prices}}
+                        span.filtered-items-quantity  ({{(filteredItems | filter:prices).length}})
+            ul.filter-list
+                h4.filter-title Brand
+                li.filter-item(ng-repeat="brands in brandsGroup")
+                    label.filter-content
+                        input(type='checkbox', ng-model="selectedBrands[brands]").filter-box
+                        span.label-text {{brands}}
+                        span.filtered-items-quantity  ({{(filteredItems | filter:brands).length}})
+        section.items-container(ng-controller="sortCtrl")
+            section.announcement
+                h4.announcement-title Last weekend
+                    span.ooze_info  extra 50%
+                        span.additional-info  off on all reduced boots and shoulder bags
+                    div.announcement-description  This offer is valid in-store and online. <br> Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2015
+            input(type='text', ng-model="query").clothes-search
+            span.sort-title Sort By:
+            select.sort-choose(ng-change="sortItems('price')" ng-model="sortByPrice")
+                option(value="cheap").sort-variant From cheap to expensive
+                option(value="expensive").sort-variant From expensive to cheap
+            ul.item-list
+                li.item(ng-repeat="item in filteredItems | filter:query | orderBy:sortField:reverse")
+                    figure
+                        img(ng-src="{{item.img}}").item-image
+                        figcaption.item-description
+                            h4 {{item.name}}
+                            span.price &#163;{{item.price | number:2}}
+                            button.view-more
+                                a(href="#/clothes/{{item.id}}") View More
+        button.show_more_btn.buttons Show more
+            div.download-banners

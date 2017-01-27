@@ -1,0 +1,69 @@
+.mobile-navigation, .logo-mobile {
+    display: none;
+}
+
+.search-input-mob {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 5px;
+    background: url('../img/desktop/loupe.png') no-repeat 100% 20%;
+}
+
+
+/* MOBILE VERSION FOR MENU */
+
+@media (max-width: 640px) {
+
+    .menuIsOpen {
+        display: block;
+    }
+
+    .logo-mobile {
+        display: inline-block;
+    }
+
+    .mobile-navigation {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        margin-top: 77px;
+        background: white;
+    }
+
+    .mob-nav .mob-list-item  {
+        list-style: none;
+        padding: 0 30px;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 27px;
+        margin-right: 6%;
+    }
+
+    .mob-nav {
+        padding-top: 28px;
+        padding-bottom: 20px;
+        border-top: 1px solid #e5e5e5;
+        margin-top: 0;
+    }
+
+    .mob-list-item a {
+        width: 100%;
+        font-size: 24px;
+        letter-spacing: 1.8px;
+        margin-bottom: 24px;
+        transition-duration: 0.5s;
+    }
+
+    .mob-list-item  a:hover, .logo-mobile a:hover {
+        color: #f14a58;
+    }
+
+    .search-input-mob {
+        float: none;
+        margin-left: 40px;
+        display: block;
+        margin-bottom: 20px !important;
+    }
+}

@@ -1,0 +1,6 @@
+nav.mobile-navigation(ng-class="{'menuIsOpen': showDiv}")
+    ul.mob-nav(ng-controller="addActiveColor")
+        each item in ['Women', 'Men', 'Handbags', 'Accessories', 'Sale', 'New arrivals', 'Clearance', 'Store Locator']
+            li.mob-list-item(ng-click="changeClass(" + "'" + item + "'" + ")")
+                a(ng-class="{class : classVar===" + "'" + item + "'" + " }", href='#/' + item)= item
+    input(type="text", placeholder="Style Name").search-input-mob

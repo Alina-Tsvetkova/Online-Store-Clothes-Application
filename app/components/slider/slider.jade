@@ -1,0 +1,20 @@
+section.slider-container(ng-controller="sliderCtrl")
+    ul.gallery
+        -var sliderImg = ["assets/img/slider/slider1.png", "assets/img/slider/slider3.png", "assets/img/slider/slider1.png"]
+            li.slide.first-slide
+                img(src=sliderImg[0])
+                figure.first-slider-info New collection
+                    h4.first-slider-title black<br>white</h4>
+                    span.seasons Spring
+                    img(src="assets/img/slider/slider1_insc.png", alt="first slider")
+                    span.seasons Summer
+            li.slide.third-slide
+                img(src=sliderImg[1])
+                figcaption.third-slider-info Stock up on laid-back threads with 75% on summer clothes <br>
+                    span You can prepare for your summer holidays – which feel like they're finally in sight - with shorts and swims
+            li.slide
+                img(src=sliderImg[2])
+        ul.scrolls(ng-controller="addActiveColor")
+            each num in [0, 1, 2]
+                li(ng-init="num" + num + "=" + num)(ng-click="changeClass(" + "'" + num + "li'" + ")")
+                    a(ng-class="{classScrolls : classVar===" + "'" + num + "li'" + " }", ng-click="slide(num" + num + ")")

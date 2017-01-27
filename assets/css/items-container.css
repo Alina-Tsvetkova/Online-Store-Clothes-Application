@@ -1,0 +1,136 @@
+.items-container {
+    position: relative;
+    padding: 0 40px;
+}
+
+.items-container .price, .cursive_notes, .old_price {
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    text-align: center;
+    color: #a1a1a1;
+    margin-top: 15px;
+}
+
+.item-list figure {
+    text-align: center;
+    margin: 0;
+}
+
+.item-description {
+    padding-top: 30px;
+    text-align: center;
+    position: relative;
+    height: 230px;
+    font-style: normal;
+
+}
+
+.item-description h4 {
+    margin-bottom: 0;
+    line-height: 1.5;
+    text-align: center;
+    color: black;
+}
+
+.item {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    transition-duration: 0.5s;
+    max-width: 1300px;
+    margin: 20px 0 65px 0;
+    padding: 10px 3%;
+}
+
+.item:hover {
+    box-shadow: 0 0 4px 2px #c8c8cc;
+}
+
+.item-image {
+    width: 100%;
+}
+
+.view-more {
+    padding: 10px 0px;
+    display: block;
+    margin: 20px auto;
+    background: white;
+    border: 1px solid #e5e5e5;
+    transition-duration: 0.5s;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180%;
+}
+
+.view-more:hover {
+    background: #c4c0c0;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .items-container .cloth {
+        width: 28%;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .item {
+        width: 33%;
+        margin-bottom: 0;
+    }
+
+    .view-more {
+        width: 90%;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 770px) {
+    .item {
+        width: 50%;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .items-container {
+        margin-top: 20px;
+    }
+
+    .item-description {
+        padding-top: 15px;
+    }
+
+    .item {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .sort-title {
+        display: block;
+        margin-bottom: 10px;
+        position: static !important;
+        margin-top: 10px;
+    }
+
+    .view-more {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 330px) {
+    .items {
+        margin-bottom: 30px;
+    }
+
+    .item-description {
+        font-size: 12px;
+    }
+}

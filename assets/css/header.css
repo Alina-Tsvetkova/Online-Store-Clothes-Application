@@ -1,0 +1,156 @@
+.header a, .logo, .top-nav, .top-nav .nav-elem, .top-nav {
+    display: inline-block;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 0 60px;
+}
+
+.bag {
+    float: right;
+    width: 250px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 7px 4.5% 0 0;
+}
+
+.icon-bag {
+    margin-right: 5px;
+}
+
+.email-sign {
+    margin-right: 8%;
+}
+
+.top-nav {
+    margin: 20px 0 20px 23px;
+    width: 80%;
+    max-width: 1300px;
+    padding-bottom: 0px;
+}
+
+.top-nav .nav-elem {
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 5.8%;
+}
+
+.top-nav .nav-elem a {
+    font-size: 14px;
+}
+
+
+.top-nav .nav-elem a:active {
+    color: lightgrey;
+}
+
+.search-input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 5px;
+    background: url('../img/desktop/loupe.png') no-repeat 100% 20%;
+    width: 150px;
+    float: right;
+    display: inline-block;
+    height: 25px;
+    font-size: 11px;
+    margin: 20px 2% 0 0;
+}
+
+.input-mobile {
+    display: none;
+}
+
+.bag-counter:hover, .class, .top-nav .nav-elem a:hover {
+    color: #f14a58;
+}
+
+/* TABLET VERSION FOR HEADER*/
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .logo {
+        margin-left: 40px;
+    }
+
+    .top-nav {
+        width: 92%;
+        margin-left: 0px;
+    }
+
+    .top-nav .nav-elem {
+        margin-right: 2.9%;
+    }
+
+    .desktop-search {
+        display: none !important;
+    }
+
+    .input-mobile {
+        width: 20px;
+        display: inline-block;
+        border: none;
+        vertical-align: top;
+        margin: 25px 4.5% 0 0;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1281px ) {
+    .top-nav .nav-elem {
+        margin-right: 4%;
+    }
+}
+
+@media (max-width: 770px) {
+    .top-nav .nav-elem a {
+        font-size: 11px;
+    }
+}
+
+/* MOBILE VERSION FOR MENU */
+
+@media (max-width: 640px) {
+    header {
+        width: 100%;
+        display: inline-block;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .logo-mobile {
+        display: inline-block;
+        padding: 0;
+        margin: 23px 0 0 4.5%;
+    }
+
+    .search-input {
+        display: none;
+    }
+
+    .bag {
+        float: none;
+        margin-left: 13%;
+        font-size: 16px;
+        width: auto;
+        vertical-align: top;
+        margin-top: 33px;
+        display: inline-block;
+    }
+
+    .top-navigation {
+        float: right;
+        width: 53px;
+        cursor: pointer;
+        height: 77px;
+        padding: 0;
+        margin: 0;
+        background: url('../img/mobile/menu.png') no-repeat 0 150%;
+        border-left: 1px solid #e5e5e5;
+    }
+
+    .logo, .top-nav, .email-sign, .delivery-note, .search-input, .icon-bag {
+        display: none;
+    }
+}

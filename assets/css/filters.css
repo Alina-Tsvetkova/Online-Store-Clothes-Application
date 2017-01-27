@@ -1,0 +1,258 @@
+.container-for-items {
+    position: relative;
+}
+
+.lists-wrapper {
+    display: none;
+    margin: 0 3%;
+}
+
+.filterIsOpen {
+    display: block;
+}
+
+.filters {
+    font-weight: bold;
+    border-top: 1px solid #e5e5e5;
+    position: relative;
+}
+
+.filter-info {
+    vertical-align: middle;
+}
+
+.filter-title {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.filter-content {
+    cursor: pointer;
+}
+
+.filter-wrapper {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-wrapper {
+    padding: 10px 60px;
+    width: 100%;
+}
+
+.filter-list {
+    margin-left: 0;
+    width: 25%;
+    background: lightgrey;
+    margin-top: 0;
+    padding-top: 10px;
+    text-align: left;
+    z-index: 5;
+    vertical-align: top;
+    display: inline-block;
+    height: 230px;
+}
+
+.filters li {
+    cursor: pointer;
+    list-style: none;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.filter-box {
+    vertical-align: middle;
+    display: none;
+}
+
+label .filter-box:checked + .label-text, label .filter-box:checked + .label-text + .filtered-items-quantity {
+    color: #f14a58;
+    font-weight: bold;
+}
+
+.filters_arrows {
+    float: right;
+    cursor: pointer;
+    height: 30px;
+    width: 20px;
+    display: inline-block;
+    background: url("../img/desktop/arrow.png") no-repeat 50% 50%;
+    background-size: 40%;
+    margin-left: 5px;
+}
+
+.crossBackground {
+    background: url("../img/tablet/filters_cross.png") no-repeat 50% 50%;
+    background-size: 60%;
+}
+
+.filter-content {
+    color: dimgrey;
+}
+
+.announcement {
+    width: 90%;
+    text-align: center;
+    margin: 15px auto 40px auto;
+    padding: 15px 0 0 0;
+}
+
+.announcement .announcement-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.announcement .announcement-description {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 30px;
+    line-height: 2;
+    color: dimgray;
+}
+
+.ooze_info, .filter-content:hover {
+    color: #f14a58;
+}
+
+.additional-info {
+    color: black;
+}
+
+.inner_group {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.price {
+    color: #a1a1a1;
+}
+
+.buttons.show_more_btn {
+    margin-top: 25px;
+    margin-bottom: 156px;
+    height: 75px;
+    width: 26.2%;
+}
+
+.bottom_part_sm {
+    padding-top: 15px;
+}
+
+.clothes-search {
+    border: none;
+    border-bottom: 2px solid #e5e5e5;
+    margin-left: 3.4%;
+    font-size: 16px;
+    padding: 5px;
+    color: dimgrey;
+    background: url(../img/desktop/loupe.png) no-repeat 100% 20%;
+}
+
+.clothes-search:focus, .sort-choose:focus {
+    outline: none;
+}
+
+.filterIsOpen {
+    display: block;
+}
+
+.sort-title {
+    color: #a1a1a1;
+    font-size: 12px;
+    margin-left: 5%;
+    position: absolute;
+}
+
+.sort-choose {
+    margin-left: 5%;
+    margin-top: 20px;
+    vertical-align: bottom;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sort-variant, .sort-choose {
+    color: #757575;
+    padding: 5px 10px;
+}
+
+@media (max-width: 480px) {
+
+    .filter-wrapper {
+        padding: 20px;
+    }
+
+    .filters {
+        border-top: none ;
+    }
+
+    .filter-list {
+        height: auto;
+        width: 100%;
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+
+    .announcement h4 {
+        line-height: 1.6;
+        width: 100%;
+    }
+
+    .announcement-description {
+        display: none;
+    }
+
+    .hide_wh_mob {
+        display: none !important;
+    }
+
+    .inscription1 {
+        top: 85%;
+        left: 15%;
+        position: absolute;
+    }
+
+    .buttons.show_more_btn {
+        width: 60%;
+        margin-top: 20px;
+        margin-bottom: 96px;
+        height: 65px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    .filter-list {
+        padding: 10px;
+    }
+
+    .announcement {
+        margin-top: 10px;
+        margin-bottom: 73px;
+        width: 78.4%;
+    }
+
+    .announcement h4 {
+        margin-bottom: 6px;
+        font-size: 20px;
+        line-height: 1.8;
+    }
+
+    .buttons.show_more_btn {
+        width: 33%;
+    }
+
+    .filter-wrapper {
+        padding: 10px 40px;
+    }
+}
+
+
