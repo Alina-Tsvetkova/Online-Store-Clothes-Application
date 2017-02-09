@@ -18,7 +18,9 @@ clothesApp.controller('renderCartCtrl', function ($scope) {
         $scope.totalItemsQuantity = 0;
         for (var k = 0; k < localStorage.length; k++) {
             var key = localStorage.key(k);
+            console.log(localStorage.getItem(key));
             var item = JSON.parse(localStorage.getItem(key));
+
             $scope.items.push(item);
             $scope.quantityOfItems = $scope.items.length;
             $scope.totalSum += Number(item.price) * $scope.items[k].quantity;

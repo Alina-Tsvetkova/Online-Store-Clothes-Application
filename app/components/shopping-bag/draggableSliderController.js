@@ -17,8 +17,13 @@ clothesApp.controller('draggableSliderCtrl', function ($scope) {
                 move_coord = edge + 40;
             }
             console.log(move_coord);
-            if (move_coord < -800) {
-                move_coord = -800;
+            var totalWidth = $('.additional-item')[0].clientWidth * $('.additional-item').length - window.innerWidth;
+            if(window.innerWidth > 1300) {
+                totalWidth+=65;
+            }
+            console.log(totalWidth);
+            if (move_coord < -totalWidth) {
+                move_coord = -totalWidth;
             }
             $draggableElem.style.left = move_coord + 'px';
         };
