@@ -52,7 +52,6 @@ div(ng-controller="clothesAppCtrl")
                         figcaption.item-description
                             h4 {{item.name}}
                             span.price &#163;{{item.price | number:2}}
-                            button.view-more
-                                a(href="#/clothes/{{item.id}}") View More
+                                a.view-more(href="#/clothes/{{item.id}}") View More
         button.show_more_btn.buttons Show more
             div.download-banners

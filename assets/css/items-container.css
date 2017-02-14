@@ -52,7 +52,6 @@
 }
 
 .view-more {
-    padding: 10px 0px;
     display: block;
     margin: 20px auto;
     background: white;
@@ -64,6 +63,13 @@
     left: 50%;
     transform: translateX(-50%);
     width: 180%;
+}
+
+.view-more a {
+    display: block;
+    padding: 10px 0;
+    position: relative;
+    z-index: 10;
 }
 
 .view-more:hover {
