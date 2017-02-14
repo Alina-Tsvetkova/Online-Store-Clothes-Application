@@ -172,6 +172,7 @@
     display: none;
 }
 
+
 @media (max-width: 700px) {
     .shopping-bag-content .cart-item {
         width: 90%;
@@ -276,6 +277,10 @@
 
     .total-sum {
         font-size: 14px;
+    }
+
+    .thankful-title, .no-items-title {
+        font-size: 40px;
     }
 }
 

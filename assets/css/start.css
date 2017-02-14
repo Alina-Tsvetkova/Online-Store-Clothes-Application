@@ -15,6 +15,10 @@
     text-align: center;
 }
 
+.arrivals-btn {
+    margin-bottom: 100px;
+}
+
 @media (min-width: 480px) and (max-width: 1024px) {
     .arrivals-header {
         margin-top: 70px;

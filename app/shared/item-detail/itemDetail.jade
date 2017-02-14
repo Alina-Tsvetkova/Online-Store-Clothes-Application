@@ -1,7 +1,7 @@
 link(href="assets/css/item-detail.css" rel='stylesheet')
 div#wrapper
     div#nav
-    a.back-catalog &#60; Back to catalog
+    a(href="").back-catalog &#60; Back to catalog
     section.item-detailed(ng-controller="clothDetailCtrl")
         figure.item-pics(ng-controller="addToCartCtrl")
             img.image(ng-src="{{item.img}}")
