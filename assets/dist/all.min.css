@@ -179,6 +179,7 @@
     font-family: 'Open Sans';
     src: url('../fonts/221.ttf') format('truetype'),
     url('../fonts/221.woff') format('woff'),
+    url('../fonts/PTSans.woff2') format('woff2'),
     url('../fonts/221.eot') format('embedded-opentype'),
     url('../fonts/221.otf') format('opentype');
 }
