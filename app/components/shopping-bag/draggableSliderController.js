@@ -16,12 +16,10 @@ clothesApp.controller('draggableSliderCtrl', function ($scope) {
             if (move_coord > edge) {
                 move_coord = edge + 40;
             }
-            console.log(move_coord);
             var totalWidth = $('.additional-item')[0].clientWidth * $('.additional-item').length - window.innerWidth;
             if(window.innerWidth > 1300) {
                 totalWidth+=65;
             }
-            console.log(totalWidth);
             if (move_coord < -totalWidth) {
                 move_coord = -totalWidth;
             }

@@ -21,19 +21,19 @@ clothesApp.controller('addToCartCtrl', function ($scope) {
         }());
 
         $scope.checkOnIDSimilarity = (function () {
-            for (var k = 0; k < localStorage.length; k++) {
-                var key = localStorage.key(k);
-                var item = JSON.parse(localStorage.getItem(key));
+            for (var k = 0; k < sessionStorage.length; k++) {
+                var key = sessionStorage.key(k);
+                var item = JSON.parse(sessionStorage.getItem(key));
                 if (item.id == $scope.itemCloth.id) {
                     $scope.itemCloth.quantity = item.quantity;
                     $scope.itemCloth.quantity += $q;
-                    localStorage.setItem($scope.itemCloth.id, JSON.stringify($scope.itemCloth));
+                    sessionStorage.setItem($scope.itemCloth.id, JSON.stringify($scope.itemCloth));
                 }
             }
         }());
 
         $scope.addItemToStorage = (function () {
-            localStorage.setItem($scope.itemCloth.id, JSON.stringify($scope.itemCloth));
+            sessionStorage.setItem($scope.itemCloth.id, JSON.stringify($scope.itemCloth));
         }());
     }
 });

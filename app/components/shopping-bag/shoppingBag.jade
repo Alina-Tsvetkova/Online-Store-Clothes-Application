@@ -25,7 +25,7 @@ div(ng-controller="renderCartCtrl")
                 a(href="") Buy now
             span.total-cost Total Cost<br>
                 span.total-sum &#163;
-                span {{totalSum | number:2}}
+                span.sum-quantity {{totalSum | number:2}}
     div.drag-wrapper
         div.additional-items(ng-controller="draggableSliderCtrl")
             -var additionalItems = ["assets/img/sub-img/jew1-sub.jpg","assets/img/sub-img/jew2-sub.jpg","assets/img/sub-img/jew3-sub.jpg","assets/img/sub-img/jew4-sub.jpg","assets/img/sub-img/jew5-sub.jpg","assets/img/sub-img/jew6-sub.jpg"]

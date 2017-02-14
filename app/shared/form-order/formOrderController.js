@@ -8,7 +8,7 @@ clothesApp.controller('formOrderCtrl', function ($scope) {
             }
         }
         if (count === 3) {
-            localStorage.clear();
+            sessionStorage.clear();
             window.location.hash = '/order-done';
 
         }

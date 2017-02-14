@@ -9,9 +9,6 @@ header.header(ng-controller="renderCartCtrl")
             img.icon_bag(src="assets/img/desktop/bag_icon.png")
         a(href="#/3_shopping_bag")
             span.bag_counter &#160;&#160;Bag
-        span#totalSum  &#163;
-            span#cartSum {{totalSum | number:2}} (
-            span#itemQuantity {{totalItemsQuantity}})
     nav.top-navigation(ng-click="showDiv = !showDiv")
         ul.top-nav(ng-controller="addActiveColor")
             each item in ['Women', 'Men', 'Handbags', 'Accessories', 'Sale', 'New arrivals', 'Clearance', 'Store Locator']
