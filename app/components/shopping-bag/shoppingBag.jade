@@ -1,4 +1,4 @@
-div(ng-controller="renderCartCtrl")
+div
     div#nav
     a.shopping-bag-title Shopping bag
     div.shopping-bag-section
@@ -9,11 +9,11 @@ div(ng-controller="renderCartCtrl")
                 img.cart-item-img(ng-src="{{item.img}}")
                 figcaption.cart-item-description
                     h3.cart-item-name {{item.name}}
-                    p Color:
+                    p Color: &nbsp;
                         span.color {{item.color}}
-                    p Size:
+                    p Size: &nbsp;
                         span.size {{item.size}}
-                    p Quantity:
+                    p Quantity: &nbsp;
                         span.quantity {{item.quantity}}
                     span.item-price &#163; {{item.price | number:2}}
                     button.remove-item(ng-click="removeItemFromCart(item.id)") Remove item

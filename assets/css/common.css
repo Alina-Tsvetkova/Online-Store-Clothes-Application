@@ -73,11 +73,14 @@ button {
     background: dimgrey;
 }
 
-@media (max-width: 480px) {
 
+@media (max-width: 640px) {
     #wrapper {
         padding: 0;
     }
+}
+
+@media (max-width: 480px) {
 
     .hide-mob {
         display: none;
