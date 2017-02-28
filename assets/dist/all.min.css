@@ -313,8 +313,12 @@ button {
     width: 100%;
 }
 
-.filter-list {
+.filter-list:first-child {
     margin-left: 0;
+}
+
+.filter-list {
+    margin-left: -5px;
     width: 25%;
     background: lightgrey;
     margin-top: 0;
